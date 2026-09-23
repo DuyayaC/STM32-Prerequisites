@@ -113,7 +113,8 @@ do
 {
    /* 先执行一次，当条件为真时再次执行 */
 
-}while( condition );
+}
+while(condition);
 
 // 循环嵌套
 for (initialization; condition; increment/decrement)
