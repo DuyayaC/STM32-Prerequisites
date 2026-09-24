@@ -15,7 +15,6 @@ enum Color {
 };
 
 enum Color myColor;
-myColor = RED;
 
 // 更常见的方法
 typedef enum

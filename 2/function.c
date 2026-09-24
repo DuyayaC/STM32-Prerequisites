@@ -25,7 +25,8 @@ int add(int x, int y);
 /* 函数被调用位置*/
 int a = 5;
 int b = 10;
-int sum0 = add(a, b);
+int sum0;
+sum0 = add(a, b);
 // 函数定义
 int add(int x, int y)
 {
@@ -67,10 +68,17 @@ func_state_t can_send_data(void)
     // 如果发生错误，返回 FUNC_STATE_ERROR
     return FUNC_STATE_FREE; // 示例返回值
 }
+if (can_send_data() == FUNC_STATE_FREE) {
+    // 可以发送数据
+} else if (can_send_data() == FUNC_STATE_BUSY) {
+    // 正在发送数据
+} else if (can_send_data() == FUNC_STATE_ERROR) {
+    // 发生错误
+}
 
 // 传值调用
 /* 函数定义 */
-void swap(int x, int y)
+int swap(int x, int y)
 {
    int temp;
 
@@ -78,5 +86,5 @@ void swap(int x, int y)
    x = y;    /* 把 y 赋值给 x */
    y = temp; /* 把 temp 赋值给 y */
   
-   return;
+   return x;
 }
