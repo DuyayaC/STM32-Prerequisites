@@ -1,4 +1,5 @@
 /* 位运算 */
+#include <stdint.h>
 
 uint8_t A;
 uint8_t B;
