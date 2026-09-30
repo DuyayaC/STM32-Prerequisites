@@ -1,7 +1,9 @@
 /* ① 编译期开关：调试打印 */
+#include <stdio.h>
+
 #define DEBUG_LEVEL 2
 
-#if DEBUG_LEVEL >= 2
+#if DEBUG_LEVEL >= 3
     #define DBG(...)  printf("[DBG] " __VA_ARGS__)
 #elif DEBUG_LEVEL == 1
     #define DBG(...)  printf("[INFO] " __VA_ARGS__)
